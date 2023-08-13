@@ -1,3 +1,5 @@
+import {RiShareForwardLine} from 'react-icons/ri'
+
 import SocialButton from '../SocialButton'
 
 import './index.css'
@@ -10,7 +12,11 @@ const Post = () => (
       React features without writing a class.
     </p>
     <div className="social-button-wrapper">
-      <SocialButton>{/* Your Code Goes here */}</SocialButton>
+      <SocialButton>Like</SocialButton>
+      <SocialButton>
+        <RiShareForwardLine className="share-icon" />
+        Share
+      </SocialButton>
     </div>
   </div>
 )

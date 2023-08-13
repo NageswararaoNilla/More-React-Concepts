@@ -6,7 +6,15 @@ class Counter extends Component {
   state = {count: 0}
 
   onIncrement = () => {
-    this.setState(prevState => ({count: prevState.count + 1}))
+    // React Batch updating -> increment 3
+    // this.setState(prevState => ({count: prevState.count + 1}))
+    // this.setState(prevState => ({count: prevState.count + 1}))
+    // this.setState(prevState => ({count: prevState.count + 1}))
+    // what happen using object syntax - increment only 1
+    // setState() method is asynchronous - this.state.count is same for every state
+    this.setState({count: this.state.count + 1})
+    this.setState({count: this.state.count + 1})
+    this.setState({count: this.state.count + 1})
   }
 
   onDecrement = () => {
